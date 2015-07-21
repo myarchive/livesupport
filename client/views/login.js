@@ -1,11 +1,12 @@
 Template.login.helpers({
-	'ownerExists': function () {
+	'noOwner': function () {
 		if (Meteor.users.find({roles: "owner"}).count() === 0)
-			return false
-		return true
+			return true;
+		return false;
 	},
 	'logoMargin': function () {
 		var t = Session.get('timer');
+		if (t > 5) $('.row').show();
 		var t = ($('.account-wall').width() - 300) / 2;
 		var t = (t < 0) ? 0 : t;
 		var o = $('.account-wall').parent().css('margin-left');
