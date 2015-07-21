@@ -1,0 +1,76 @@
+<head>
+	<title>Live Support</title>
+</head>
+
+<body>
+</body>
+
+<template name="layout">
+	{{{connectStatus}}}
+	{{#if currentUser}}
+	<header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="/" class="navbar-brand"><img src="/logo.png" alt="logo"></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-left">
+					<li><a href="/profile">Profile</a></li>
+					{{#if isInRole 'admin,owner'}}
+					<li><a href="/operators">Operators</a></li>
+					<li><a href="/sites">Sites</a></li>
+					{{/if}}
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					{{> loginButtons }}
+				</ul>
+			</div>
+		</div>
+	</header>
+	{{/if}}
+	<div id="content" class="container">
+		{{> yield }}
+	</div>
+    <footer id="footer" class="footer midnight-blue">
+		<p class="text-muted" style="text-align: center; margin:0 auto; padding: 0"><small>&copy;2015 <a href="http://edialogue.org">eDialogue</a></small></p>
+    </footer>
+</template>
+
+<template name="_loginButtonsAdditionalLoggedInDropdownActions">
+	{{#if isInRole 'owner'}}
+    <a href="/owner"><button class="btn btn-secondary btn-block" id="login-buttons-edit-profile">Owner Console</button></a>
+	{{/if}}
+	{{#if isInRole 'admin,owner'}}
+    <a href="/admin"><button class="btn btn-secondary btn-block" id="login-buttons-edit-profile">Admin Console</button></a>
+	{{/if}}
+</template>
+
+<template name="notFound">
+	<div class="row">
+		<p>Not Found...</p>
+	</div>
+</template>
+
+<template name="loading">
+	<div class="row">
+		<p>Loading...</p>
+	</div>
+</template>
+
+<template name="notLoggedIn">
+	<div class="row">
+		<p>Not Logged In...</p>
+	</div>
+</template>
+
+<template name="accessDenied">
+	<div class="row">
+		<p>Access Denied...</p>
+	</div>
+</template>

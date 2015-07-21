@@ -7,7 +7,6 @@
 meteor-platform
 accounts-password
 twbs:bootstrap
-ian:accounts-ui-bootstrap-3
 splendido:accounts-meld
 iron:router
 mizzao:user-status
@@ -17,3 +16,4 @@ mizzao:bootboxjs
 alisalaah:hijri-tools
 ephemer:reactive-datatables
 matb33:collection-hooks
+ian:accounts-ui-bootstrap-3

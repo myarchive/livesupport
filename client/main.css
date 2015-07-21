@@ -1,0 +1,100 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 40px;
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 25px;
+	background: rgba(52, 73, 94, .5);
+}
+.footer a { color: #bbb; }
+.footer a:hover { color: #16a085; }
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+body {
+	background: rgb(255, 239, 213);
+    background: rgba(255, 239, 213, .5);
+	background-image: url(/bg.png);
+	background-repeat: repeat;
+	padding-top: 75px;
+}
+/*@media (max-width: 979px) {
+	body {
+		padding-top: 0px;
+	}
+}*/
+.navbar-brand {
+	padding: 5px 40px 5px 0;
+}
+.navbar-brand > img {
+	height: 43px;
+}
+
+a { cursor: pointer; }
+
+.hide {
+	display: none;
+}
+.alignLeft {
+	text-align: left;
+}
+.alignRight {
+	text-align: right;
+}
+.alignCenter {
+	text-align: center;
+}
+
+.dataTables_length {
+	height: 50px;
+	padding: 10px 0;
+	line-height: 30px;
+}
+.dataTables_length > a {
+	margin: 0 20px;
+}
+
+.dataTables_filter > label {
+	color: white;
+	background: white;
+	position: relative;
+	border-radius: 25px;
+	width: 200px;
+	height: 45px;
+}
+.dataTables_filter > label:before {
+	position:absolute;
+	top: 3px;
+	left: 20px;
+	color: black;
+	font-family: FontAwesome;
+	font-size: 18px;
+	content: "\f002";
+}
+.dataTables_filter > label > input {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	width: 140px;
+	color: black;
+	border: none;
+	background: transparent;
+}
+.dataTables_filter > label > input:focus {
+    outline: 0;
+}
+
+input.error { background: rgba(255, 0, 0, .2) !important; }
+input.warning { background: rgba(255, 255, 0, .2) !important; }
+input.success { background: rgba(0, 255, 0, .2) !important; }

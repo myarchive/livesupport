@@ -1,0 +1,64 @@
+<template name="login">
+	{{#if ownerExists}}
+	<div class="container">
+		<div class="row">
+			<h1 style="margin-left:{{logoMargin}}px; margin-top: {{loginMargin}}px"><a><img src="/logo.png" alt="logo"></a></h1>
+			<div class="col-sm-6 col-md-4 col-sm-offset-2 col-md-offset-4 outer">
+				<div class="account-wall">
+					<h3 class="text-center login-title">{{loginTitle}}</h3>
+					<form class="form-signin" id="login">
+						{{formFields}}
+						<input name="password" id="password" type="password" class="form-control" placeholder="Password" required>
+						<button id='submit' class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+					</form>
+				</div>
+				<a href="/forgot-password" class="text-center text-display" id="forgot-password">Forgot password? </a>
+				<span id="single-page-login-alert"></span>
+			</div>
+		</div>
+	</div>
+	{{else}}
+	<div class="container">
+		<div class="row">
+			<h1 style="margin-left:{{logoMargin}}px; margin-top: {{createnMargin}}px"><a><img src="/logo.png" alt="logo"></a></h1>
+			<div class="col-sm-6 col-md-4 col-sm-offset-2 col-md-offset-4 outer">
+				<div class="account-wall">
+					<h3 class="text-center login-title">{{createTitle}}</h3>
+					<form class="form-signin" id="first">
+						<input name="fname" id="fname" type="text" class="form-control" placeholder="First Name" required>
+						<input name="lname" id="lname" type="text" class="form-control" placeholder="Last Name" required style="margin:0;border-radius:0">
+						<input name="uname" id="uname" type="text" class="form-control" placeholder="Username" required style="margin:0;border-radius:0">
+						<input name="email" id="email" type="text" class="form-control" placeholder="Email address" required style="margin:0;border-radius:0">
+						<input name="pass" id="pass" type="password" class="form-control" placeholder="Password" required style="margin:0;border-radius:0">
+						<input name="confirm" id="confirm" type="password" class="form-control" placeholder="Confirm password" required>
+						<button id='submit' class="btn btn-lg btn-primary btn-block" type="submit">Create</button>
+					</form>
+				</div>
+				<span id="single-page-login-alert"></span>
+			</div>
+		</div>
+	</div>
+	{{/if}}
+</template>
+
+<template name="forgotPassword">
+    <div class="container">
+		<div class="row">
+			<h1 style="text-align: center;"><a><img src="/logo.png" alt="logo"></a></h1>
+			<div class="col-sm-6 col-md-4 col-sm-offset-2 col-md-offset-4 outer">
+				<div class="account-wall">
+					<h3 class="text-center login-title">Recover Password</h3>
+					<span id="single-page-login-alert"></span>
+					<form class="form-password-lookup">
+						<input name="email" id="email" type="text" class="form-control" placeholder="Email" required>
+
+						<button id='submit' class="btn btn-lg btn-primary btn-block" type="submit">
+							Submit</button>
+						<a href type="button" id='cancel' class="btn btn-lg btn-primary btn-block">
+							Cancel</a>
+					</form>
+				</div>
+			</div>
+		</div>
+    </div>
+</template>
