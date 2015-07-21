@@ -10,7 +10,7 @@ Template.login.helpers({
 		var t = ($('.account-wall').width() - 300) / 2;
 		var t = (t < 0) ? 0 : t;
 		var o = $('.account-wall').parent().css('margin-left');
-		var o = o.replace('px','');
+		var o = (o !== undefined) ? o.replace('px','') : 0;
 		var o = o * 1;
 		var t = t + o;
 		return t;
