@@ -95,6 +95,29 @@ a { cursor: pointer; }
     outline: 0;
 }
 
+.navbar-collapse .navbar-nav.navbar-left:first-child > li:first-child a,
+.navbar-collapse .navbar-nav.navbar-right:last-child > .dropdown:last-child > a{
+	border-radius: 0 !important;
+}
+
 input.error { background: rgba(255, 0, 0, .2) !important; }
 input.warning { background: rgba(255, 255, 0, .2) !important; }
 input.success { background: rgba(0, 255, 0, .2) !important; }
+
+.navbar .divider-vertical {
+	height: 53px;
+	margin: 0 9px;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ddd;
+}
+
+.navbar-inverse .divider-vertical {
+	border-right-color: #222;
+	border-left-color: #111;
+}
+
+@media (max-width: 767px) {
+	.navbar-collapse .nav > .divider-vertical {
+		display: none;
+	}
+}

@@ -1,8 +1,8 @@
-Template.operators.events({
+Template.users.events({
 	'click #add': function () {
 		bootbox.dialog({
-			title: "Add Operator",
-			message: Blaze.toHTMLWithData(Template.operatorAdd),
+			title: "Add User",
+			message: Blaze.toHTMLWithData(Template.userAdd),
 			onEscape: true,
 			closeButton: true,
 			buttons: {
@@ -13,16 +13,15 @@ Template.operators.events({
 						var res = validateForm();
 						if (res) {
 							var form = getForm();
-							console.log(form)
 							Meteor.call('addUser', form.fname, form.lname, form.user, form.email, form.password, form.gender, form.language);
 							var w = $(".modal-body").width() + 30;
 							var h = $(".modal-body").height() + 30;
 							var t = (h - 60) / 2;
 							var l = (w - 300) / 2;
-							$(".modal-body").append('<div id="tempSucc" class="alert alert-success" style="position:absolute; top: ' + t + 'px; left: ' + l + 'px; width: 300px; text-align: center;"><i class="fa fa-check-circle"></i> Successfully added operator!</div>');
+							$(".modal-body").append('<div id="tempSucc" class="alert alert-success" style="position:absolute; top: ' + t + 'px; left: ' + l + 'px; width: 300px; text-align: center;"><i class="fa fa-check-circle"></i> Successfully added user!</div>');
 							Meteor.setTimeout(function () {
 								bootbox.hideAll();
-								$('#operatorsTable').DataTable();
+								$('#usersTable').DataTable();
 							}, 1000);
 						}
 						return false;

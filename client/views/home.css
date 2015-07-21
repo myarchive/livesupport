@@ -2,6 +2,60 @@
 	margin-left: -1px;
 }
 .tab-content {
-	padding: 1px 10px 10px;
+	padding: 20px 10px 10px;
 	background: #fff;
+}
+
+.chatBox {
+	float: left;
+	border: 1px solid #aaa;
+	border-radius: 5px 0 0 5px;
+}
+.infoBox {
+	float: left;
+	border: 1px solid #aaa;
+	border-radius: 0 5px 5px 0;
+	background: rgba(0,0,0,.1)
+}
+.chatMsg {
+	overflow-y: scroll;
+	border-bottom: 1px solid #aaa;
+}
+.chatMsg > div {
+	width: 100%;
+}
+.chatMsg > div > p {
+	padding: 5px 20px;
+	border-radius: 5px;
+	margin: 5px;
+	display: inline-block;
+	min-width: 150px;
+}
+.chatMsg > .agent {
+	text-align: right;
+	padding-left: 100px;
+}
+.chatMsg > .agent > p {
+	background: rgba(0,255,0,.2);
+}
+.chatMsg > .guest {
+	text-align: left;
+	padding-right: 100px;
+}
+.chatMsg > .guest > p {
+	background: rgba(0,0,0,.1);
+}
+.chatInp {
+}
+.chatInp > input {
+	outline: 0;
+	border: none;
+	padding: 5px 10px;
+	background: transparent;
+}
+.infoDat > p {
+	margin: 0;
+	font-size: 14px;
+}
+.infoCan {
 }
