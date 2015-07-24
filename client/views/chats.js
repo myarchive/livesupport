@@ -1,38 +1,30 @@
-Template.team.helpers({
+Template.chats.helpers({
 	tableData: function () {
 		return dataTableData;
 	},
 	tableOptions: {
-		id: 'teamTable',
+		id: 'chatsTable',
 		paging: false,
 		order: [[0, "asc"], [1, "asc"]],
 		columns: [{
-				title: 'Status',
-				data: 'status.online',
-				className: 'hide'
+				title: 'Date',
+				data: '',
+				className: 'alignCenter'
 			}, {
-				title: 'Name',
+				title: 'Guest',
 				data: 'profile.fname',
 				render: renderName,
 				className: 'alignLeft'
 			}, {
-				title: 'Username',
-				data: 'username',
-				className: 'alignCenter'
+				title: 'Duration',
+				data: '',
+				className: 'alignLeft'
 			}, {
-				title: 'Hours',
+				title: 'Flagged',
 				data: '',
 				className: 'alignCenter'
 			}, {
-				title: 'Chats',
-				data: '',
-				className: 'alignCenter'
-			}, {
-				title: 'Reviewed',
-				data: '',
-				className: 'alignCenter'
-			}, {
-				title: 'Avg. Score',
+				title: 'Score',
 				data: '',
 				className: 'alignCenter'
 			}],

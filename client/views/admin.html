@@ -1,0 +1,21 @@
+<template name="admin">	
+	{{> adminNav }}
+	<div class="container">
+		<div class="row">
+			Admin Dashboard...
+		</div>
+	</div>
+</template>
+
+<template name="adminNav">
+	<div class="admin-nav">
+		<ul class="nav nav-pills container">
+			<li role="presentation" id="na-dashb" class="{{active 'admin'}}"><a href="/admin">Dashboard</a></li>
+			<li role="presentation" id="na-users" class="{{active 'adminUsers'}}"><a href="/admin/users">Users</a></li>
+			<li role="presentation" id="na-teams" class="{{active 'adminTeams'}}"><a href="/admin/teams">Teams</a></li>
+			<li role="presentation" id="na-depts" class="{{active 'adminDepts'}}"><a href="/admin/depts">Departments</a></li>
+			<li role="presentation" id="na-langs" class="{{active 'adminLangs'}}"><a href="/admin/langs">Languages</a></li>
+			<li role="presentation" id="na-reports" class="{{active 'adminReports'}}"><a href="/admin/reports">Reports</a></li>
+		</ul>
+	</div>	
+</template>

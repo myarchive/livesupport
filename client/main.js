@@ -20,5 +20,11 @@ Template.layout.helpers({
 				return '<div id="connectStatus" class="alert alert-warning timer-' + t + '" role="alert" style="position:absolute; top:60px; left:' + left + 'px; width: 600px; z-index: 99999;"><strong>Disconnected:</strong> Attempting reconnect in ' + dur + ' seconds or try <a onclick="Meteor.reconnect()">now</a>... <small style="opacity: 0.6; margin-top: -10px;">(' + Meteor.status().retryCount + ')</small></div>';
 		}
 		return '';
+	},
+	active: function (section) {
+		var page = Session.get('currPage');
+		if (page === section)
+			return 'active';
+		return '';
 	}
 });

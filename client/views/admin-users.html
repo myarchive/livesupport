@@ -1,5 +1,10 @@
-<template name="users">
-	{{> ReactiveDatatable tableData=tableData options=tableOptions }}
+<template name="adminUsers">
+	{{> adminNav }}
+	<div class="container">
+		<div class="row">
+			{{> ReactiveDatatable tableData=tableData options=tableOptions }}
+		</div>
+	</div>
 </template>
 
 <template name="usersToolbar">

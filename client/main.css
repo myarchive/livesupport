@@ -100,9 +100,26 @@ a { cursor: pointer; }
 	border-radius: 0 !important;
 }
 
-input.error { background: rgba(255, 0, 0, .2) !important; }
-input.warning { background: rgba(255, 255, 0, .2) !important; }
-input.success { background: rgba(0, 255, 0, .2) !important; }
+input.error { 
+	background: rgba(255, 0, 0, .2) !important; 
+}
+input.warning { 
+	background: rgba(255, 255, 0, .2) !important; 
+}
+input.success { 
+	background: rgba(0, 255, 0, .2) !important; 
+}
+
+
+#datatable_paginate {
+	padding-top: 14px;
+}
+.legendPill {
+	padding: 5px;
+	margin: 0 5px;
+	font-size: 12px;
+	border-radius: 5px;
+}
 
 .navbar .divider-vertical {
 	height: 53px;
@@ -120,4 +137,8 @@ input.success { background: rgba(0, 255, 0, .2) !important; }
 	.navbar-collapse .nav > .divider-vertical {
 		display: none;
 	}
+}
+
+.nav-pills {
+	margin-bottom: 20px;
 }

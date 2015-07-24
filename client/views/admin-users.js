@@ -1,4 +1,4 @@
-Template.users.helpers({
+Template.adminUsers.helpers({
 	tableData: function () {
 		return dataTableData;
 	},
@@ -30,10 +30,10 @@ Template.users.helpers({
 			sInfoFiltered: "found from _MAX_"
 		},
 		initComplete: function () {
-			$('#DataTables_Table_0').addClass('table-striped table-bordered');
+//			$('.dataTable').addClass('table-striped table-bordered');
 			$('.dataTables_filter > label > input').attr("placeholder", "Search").focus();
-			$('#DataTables_Table_0_filter').before(Blaze.toHTMLWithData(Template.usersToolbar));
-			$('#DataTables_Table_0_info').after(Blaze.toHTMLWithData(Template.usersLegend));
+			$('.dataTables_filter').before(Blaze.toHTMLWithData(Template.usersToolbar));
+			$('.dataTables_info').after(Blaze.toHTMLWithData(Template.usersLegend));
 		},
 		fnDrawCallback: function () {
 			//$.each($('.scholarName'), function () {

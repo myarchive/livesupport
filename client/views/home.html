@@ -1,72 +1,76 @@
 <template name="home">
-    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-        <li class="active"><a href="#guest1" data-toggle="tab">Guest 1</a></li>
-        <li><a href="#guest2" data-toggle="tab">Guest 2</a></li>
-    </ul>
-    <div id="my-tab-content" class="tab-content" style="min-height: 300px; height: {{conHeight}}px;">
-        <div id="guest1" class="container tab-pane active">
-			<div class="chatBox" style="height:{{boxHeight}}px; width:{{chatWidth}}px;">
-				<div class="chatMsg" style="height:{{msgHeight}}px;">
-					<div class="guest"><p>Long message long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message </p></div>
-					<div class="agent"><p>Short message</p></div>
-					<div class="guest"><p>Long message long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message </p></div>
-					<div class="agent"><p>Long message long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message </p></div>
-					<div class="guest"><p>Short message</p></div>
-					<div class="agent"><p>Short message</p></div>
-					<div class="guest"><p>Short message</p></div>
-					<div class="agent"><p>Short message</p></div>
-					<div class="agent"><p>Short message</p></div>
-					<div class="guest"><p>Short message</p></div>
-					<div class="guest"><p>Short message</p></div>
-					<div class="agent"><p>Short message</p></div>
-					<div class="guest"><p>Short message</p></div>
-					<div class="agent"><p>Short message</p></div>
-					<div class="guest"><p>Short message</p></div>
+	<div class="container">
+		<div class="row">
+			<ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+				<li class="active"><a href="#guest1" data-toggle="tab">Guest 1</a></li>
+				<li><a href="#guest2" data-toggle="tab">Guest 2</a></li>
+			</ul>
+			<div id="my-tab-content" class="tab-content" style="min-height: 300px; height: {{conHeight}}px;">
+				<div id="guest1" class="container tab-pane active">
+					<div class="chatBox" style="height:{{boxHeight}}px; width:{{chatWidth}}px;">
+						<div class="chatMsg" style="height:{{msgHeight}}px;">
+							<div class="guest"><p>Long message long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message </p></div>
+							<div class="agent"><p>Short message</p></div>
+							<div class="guest"><p>Long message long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message </p></div>
+							<div class="agent"><p>Long message long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message </p></div>
+							<div class="guest"><p>Short message</p></div>
+							<div class="agent"><p>Short message</p></div>
+							<div class="guest"><p>Short message</p></div>
+							<div class="agent"><p>Short message</p></div>
+							<div class="agent"><p>Short message</p></div>
+							<div class="guest"><p>Short message</p></div>
+							<div class="guest"><p>Short message</p></div>
+							<div class="agent"><p>Short message</p></div>
+							<div class="guest"><p>Short message</p></div>
+							<div class="agent"><p>Short message</p></div>
+							<div class="guest"><p>Short message</p></div>
+						</div>
+						<div class="chatInp" style="height:{{inpHeight}}px;">
+							<input type="text" placeholder="Enter reply.." style="height:39px;width:100%">
+						</div>
+					</div>
+					<div class="infoBox" style="height:{{boxHeight}}px; width:{{infoWidth}}px;">
+						<div class="infoDat" style="height:{{datHeight}}px;">
+							<p class="col-sm-4">Name:</p><p class="col-sm-8">Guest 1</p>
+							<p class="col-sm-4">IP:</p><p class="col-sm-8">180.66.77.101</p>
+							<p class="col-sm-4">Country:</p><p class="col-sm-8">United Kingdom</p>
+						</div>
+						<div class="infoCan" style="height:{{canHeight}}px;"></div>				
+					</div>
 				</div>
-				<div class="chatInp" style="height:{{inpHeight}}px;">
-					<input type="text" placeholder="Enter reply.." style="height:39px;width:100%">
+				<div id="guest2" class="container tab-pane">
+					<div class="chatBox" style="height:{{boxHeight}}px; width:{{chatWidth}}px;">
+						<div class="chatMsg" style="height:{{msgHeight}}px;">
+							<div class="guest"><p>Long message long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message </p></div>
+							<div class="agent"><p>Short message</p></div>
+							<div class="guest"><p>Long message long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message </p></div>
+							<div class="agent"><p>Long message long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message </p></div>
+							<div class="guest"><p>Short message</p></div>
+							<div class="agent"><p>Short message</p></div>
+							<div class="guest"><p>Short message</p></div>
+							<div class="agent"><p>Short message</p></div>
+							<div class="agent"><p>Short message</p></div>
+							<div class="guest"><p>Short message</p></div>
+							<div class="guest"><p>Short message</p></div>
+							<div class="agent"><p>Short message</p></div>
+							<div class="guest"><p>Short message</p></div>
+							<div class="agent"><p>Short message</p></div>
+							<div class="guest"><p>Short message</p></div>
+						</div>
+						<div class="chatInp" style="height:{{inpHeight}}px;">
+							<input type="text" placeholder="Enter reply.." style="height:39px;width:100%">
+						</div>
+					</div>
+					<div class="infoBox" style="height:{{boxHeight}}px; width:{{infoWidth}}px;">
+						<div class="infoDat" style="height:{{datHeight}}px;">
+							<p class="col-sm-4">Name:</p><p class="col-sm-8">Guest 2</p>
+							<p class="col-sm-4">IP:</p><p class="col-sm-8">64.11.22.201</p>
+							<p class="col-sm-4">Country:</p><p class="col-sm-8">India</p>
+						</div>
+						<div class="infoCan" style="height:{{canHeight}}px;"></div>				
+					</div>
 				</div>
 			</div>
-			<div class="infoBox" style="height:{{boxHeight}}px; width:{{infoWidth}}px;">
-				<div class="infoDat" style="height:{{datHeight}}px;">
-					<p class="col-sm-4">Name:</p><p class="col-sm-8">Guest 1</p>
-					<p class="col-sm-4">IP:</p><p class="col-sm-8">180.66.77.101</p>
-					<p class="col-sm-4">Country:</p><p class="col-sm-8">United Kingdom</p>
-				</div>
-				<div class="infoCan" style="height:{{canHeight}}px;"></div>				
-			</div>
-        </div>
-        <div id="guest2" class="container tab-pane">
-			<div class="chatBox" style="height:{{boxHeight}}px; width:{{chatWidth}}px;">
-				<div class="chatMsg" style="height:{{msgHeight}}px;">
-					<div class="guest"><p>Long message long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message </p></div>
-					<div class="agent"><p>Short message</p></div>
-					<div class="guest"><p>Long message long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message </p></div>
-					<div class="agent"><p>Long message long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message  long message </p></div>
-					<div class="guest"><p>Short message</p></div>
-					<div class="agent"><p>Short message</p></div>
-					<div class="guest"><p>Short message</p></div>
-					<div class="agent"><p>Short message</p></div>
-					<div class="agent"><p>Short message</p></div>
-					<div class="guest"><p>Short message</p></div>
-					<div class="guest"><p>Short message</p></div>
-					<div class="agent"><p>Short message</p></div>
-					<div class="guest"><p>Short message</p></div>
-					<div class="agent"><p>Short message</p></div>
-					<div class="guest"><p>Short message</p></div>
-				</div>
-				<div class="chatInp" style="height:{{inpHeight}}px;">
-					<input type="text" placeholder="Enter reply.." style="height:39px;width:100%">
-				</div>
-			</div>
-			<div class="infoBox" style="height:{{boxHeight}}px; width:{{infoWidth}}px;">
-				<div class="infoDat" style="height:{{datHeight}}px;">
-					<p class="col-sm-4">Name:</p><p class="col-sm-8">Guest 2</p>
-					<p class="col-sm-4">IP:</p><p class="col-sm-8">64.11.22.201</p>
-					<p class="col-sm-4">Country:</p><p class="col-sm-8">India</p>
-				</div>
-				<div class="infoCan" style="height:{{canHeight}}px;"></div>				
-			</div>
-        </div>
-    </div>
+		</div>
+	</div>
 </template>

@@ -1,4 +1,4 @@
-Template.users.events({
+Template.adminUsers.events({
 	'click #add': function () {
 		bootbox.dialog({
 			title: "Add User",
