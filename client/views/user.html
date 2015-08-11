@@ -1,0 +1,22 @@
+<template name="user">
+<div class="container">
+{{#if registered}}
+<ul>
+	<li><strong>First name:</strong> {{infos.profile.fname}}</li>
+	<li><strong>Last name:</strong> {{infos.profile.lname}}</li>
+	<li><strong>Gender:</strong> {{infos.profile.gender}}</li>
+	<li>
+		<strong>Email(s):</strong> 
+		{{#each infos.emails}}
+			{{address}} - {{#if verified}} Verified {{else}} Not verified {{/if}}
+		{{/each}}
+	</li>
+</ul>
+
+
+
+{{else}}
+Not exist
+{{/if}}
+</div>
+</template>
