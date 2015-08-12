@@ -50,5 +50,5 @@ function dataTableData() {
 	return Meteor.users.find({}, {sort: {'profile.name': 1, username: 1}}).fetch(); // or .map()
 }
 function renderName(cellData, renderType, currentRow) {
-	return '<a class="userName" href="/users/'+currentRow.username+'">'+currentRow.profile.fname+' '+currentRow.profile.lname+'</a>';
+	return '<a class="userName" href="/admin/users/'+currentRow.username+'">'+currentRow.profile.fname+' '+currentRow.profile.lname+'</a>';
 }

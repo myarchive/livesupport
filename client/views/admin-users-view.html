@@ -1,0 +1,30 @@
+<template name="adminUsersView">
+	{{> adminNav }}
+	<div class="container">
+		<legend>
+			<span id="name">{{username}}</span>
+			<a id="editBio" href="/admin/users/{{username}}/edit">[Edit]</a>
+			{{#if isInRole 'admin,owner'}}
+			<a id="deleteBio" href="/admin/users/{{username}}/delete">[Delete]</a>
+			{{/if}}
+		</legend>
+		<ul>
+			<li><strong>First name:</strong> {{profile.fname}}</li>
+			<li><strong>Last name:</strong> {{profile.lname}}</li>
+			<li><strong>Gender:</strong> {{profile.gender}}</li>
+			<li>
+				<strong>Email(s):</strong> 
+				{{#each emails}}
+				{{address}} - {{#if verified}} Verified {{else}} Not verified {{/if}}
+				{{/each}}
+			</li>
+		</ul>
+	</div>
+</template>
+
+<template name="adminUsersNoUser">
+	{{> adminNav }}
+	<div class="container">
+		<p>No such user <strong>{{username}}</strong> exists.</p>
+	</div>
+</template>

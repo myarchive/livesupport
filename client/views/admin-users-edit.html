@@ -1,0 +1,24 @@
+<template name="adminUsersEdit">
+	{{> adminNav }}
+	<div class="container">
+		<legend>
+			<span id="name">{{username}}</span>
+			<a id="cancel" href="/admin/users/{{username}}">[Cancel]</a>
+			<a id="save">[Save]</a>
+		</legend>
+		
+		EDIT PAGE
+		
+		<ul>
+			<li><strong>First name:</strong> {{profile.fname}}</li>
+			<li><strong>Last name:</strong> {{profile.lname}}</li>
+			<li><strong>Gender:</strong> {{profile.gender}}</li>
+			<li>
+				<strong>Email(s):</strong> 
+				{{#each emails}}
+				{{address}} - {{#if verified}} Verified {{else}} Not verified {{/if}}
+				{{/each}}
+			</li>
+		</ul>
+	</div>
+</template>

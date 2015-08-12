@@ -142,3 +142,12 @@ input.success {
 .nav-pills {
 	margin-bottom: 20px;
 }
+
+legend {
+	border-bottom: 1px solid #666;
+}
+legend > a {
+	float: right;
+	font-size: .6em;
+	margin: 10px;
+}
