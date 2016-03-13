@@ -1,6 +1,4 @@
-# livesupport
-
-...
+**This package was discontinued in favor of the LiveChat started as part of [RocketChat](https://rocket.chat/)**
 
 # Getting Started
 
